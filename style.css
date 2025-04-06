@@ -1,0 +1,373 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 2;
+  padding: 2;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: #f0f2f7;
+  color: #111827;
+  line-height: 1.6;
+}
+
+.sticky-nav {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.sticky-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sticky-nav a {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.sticky-nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color:#343842;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.sticky-nav a:hover {
+  color:#343842;
+}
+
+.sticky-nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.sticky-nav li {
+  list-style: none;
+}
+
+.sticky-nav li:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+
+.profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #000000, #343842);
+  color: white;
+  text-align: center;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.profile-info h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.contact-info a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+main {
+  padding: 2.5rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: black;
+}
+
+.education-item,
+.experience-item,
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border-left: 4px solid black;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 0 4px 4px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-item:hover,
+.experience-item:hover,
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3,
+.experience-item h3,
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.education-item span,
+.experience-item p.date,
+.project-card p.date {
+  color: #6b7280;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.experience-item p.description,
+.project-card p.description {
+  color: #4b5563;
+  margin-top: 0.75rem;
+}
+
+
+.certification-item {
+  background: white;
+  padding: 1.5rem;
+  border-left: 4px solid black;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 0 4px 4px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certification-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.certification-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.certification-item p {
+  color: #6b7280;  
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.certification-item ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #4b5563;
+}
+
+.certification-item ul li {
+  margin-bottom: 0.4rem;
+}
+
+.certification-item a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.certification-item a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+
+.skills-grid div {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.skills-grid h4 {
+  margin-bottom: 0.75rem;
+  color: #1e3a8a;
+  font-size: 1.1rem;
+}
+
+.skills-grid ul {
+  list-style: none;
+}
+
+.skills-grid li {
+  margin-bottom: 0.4rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-card a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+footer p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  background-color: #333; 
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons a.linkedin:hover {
+  background-color: #0077b5;
+}
+
+.social-icons a.github:hover {
+  background-color: #000;
+}
+
+.social-icons a.email:hover {
+  background-color: #db4437;
+}
+.social-icons a:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 500px) {
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
